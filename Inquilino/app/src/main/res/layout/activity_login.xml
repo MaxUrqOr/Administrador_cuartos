@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_Login"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".login.LoginActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+
+        <TextView
+            android:id="@+id/tvTituloMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/dmsans_18pt_black"
+            android:text="@string/titulo_bienvenido_login"
+            android:textAlignment="center"
+            android:textColor="@color/color_letras"
+            android:textSize="44sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubtituloMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/dmsans_18pt_regular"
+            android:text="@string/saludo_login"
+            android:textAlignment="center"
+            android:textColor="#524B6B"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/tvTituloMain"
+            app:layout_constraintStart_toStartOf="@+id/tvTituloMain"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloMain" />
+
+        <TextView
+            android:id="@+id/tvUsuarioTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/usuario_login"
+            android:textColor="@color/color_letras"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTituloMain"
+            app:layout_constraintStart_toStartOf="@+id/tvTituloMain"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtituloMain" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiEdtLayoutCorreoLogin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:textColorHint="@color/color_letras"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/morado_oscuro"
+            app:hintTextColor="#3F13E4"
+            app:layout_constraintEnd_toEndOf="@+id/tvUsuarioTitulo"
+            app:layout_constraintStart_toStartOf="@+id/tvUsuarioTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsuarioTitulo">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+
+                android:drawableEnd="@drawable/ic_user_login"
+                android:drawableTint="@color/morado_oscuro"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:hint="@string/ejemplo_correo_login"
+                android:inputType="textEmailAddress|textAutoComplete"
+                android:maxLines="1"
+
+                android:singleLine="true"
+                android:textColor="@color/color_letras"
+                android:textColorHint="#3F13E4"
+                android:textSize="19sp"
+                tools:text="rafael@makapid.com">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/contraseña_login"
+            android:textColor="@color/color_letras"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvUsuarioTitulo"
+            app:layout_constraintStart_toStartOf="@+id/tvUsuarioTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/tiEdtLayoutCorreoLogin" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiEdtLayoutContrasenaLogin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:textColorHint="@color/color_letras"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/morado_oscuro"
+            app:hintTextColor="#3F13E4"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:passwordToggleDrawable="@drawable/ic_password_login"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/morado_oscuro">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:drawableTint="@color/morado_oscuro"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:hint="@string/ejemplo_contraseña_login"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_letras"
+                android:textSize="19sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvOlvidasteC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/olvidaste_contrasena"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/morado_oscuro"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/tiEdtLayoutContrasenaLogin" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:fontFamily="@font/dmsans_18pt_regular"
+            android:text="@string/texto_advertencia"
+            android:textAlignment="center"
+            android:textColor="#524B6B"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/tvOlvidasteC"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvOlvidasteC"
+            app:layout_constraintTop_toBottomOf="@+id/tvOlvidasteC" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButtonIngresarLogin"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/background_button_ingresar_login"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="@string/ingresar_login"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/appCompatButtonIngresarLogin"
+            app:layout_constraintStart_toStartOf="@+id/appCompatButtonIngresarLogin"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButtonIngresarLogin" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

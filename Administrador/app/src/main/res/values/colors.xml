@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="ColorPrincipal1">#1A2849</color>
+    <color name="ColorPrincipal2">#505BDA</color>
+    <color name="ColorPrincipal3">#B063C5</color>
+    <color name="ColorPrincipal4">#FFAAC3</color>
+
+    <color name="ColorPrincipal5">#FF9A7A</color>
+
+    <color name="ColorTransparente">#00BD2753</color>
+
+    <color name="fondoSplash">#130160</color>
+
+    //Colores Personalizados
+    <color name="background_Login">#FDFDFD</color>
+    <color name="background_General">#FDFDFD</color>
+    <color name="morado_oscuro">#130160</color>
+    <color name="morado_oscuro2">#A4130160</color>
+    <color name="color_letras">#0D0140</color>
+    <color name="color_letras_60_intensidad">#990D0140</color>
+    <color name="color_background_oval">#EBFFFFFF</color>
+    <color name="color_background_main">#EBFFFFFF</color>
+    <color name="transparente">#00FFFFFF</color>
+    <color name="btn_navegacion_no_seleccionado">#337551FF</color>
+    <color name="btn_navegacion_seleccionado">#150B3D</color>
+    <color name="naranja_paleta">#FF9228</color>
+    <color name="naranja_paleta2">#C1FF9228</color>
+
+    <color name="backgroundConstraintlibre">#1ABEAFFE</color>
+    <color name="backgroundConstraintGeneral">#FFFFFFFF</color>
+    <color name="hintPalalabras">#7D7C7F</color>
+    <color name="letras2">#3F13E4</color>
+
+    //Botones
+    <color name="btnPagoInvalid">#dc6378</color>
+    <color name="btnPagoVerificado">#50E475</color>
+
+    //Estados
+    <color name="colorPagado">#83C000</color>
+    <color name="colorDeuda">#FF9228</color>
+    <color name="colorLibre">#FFFFFF</color>
+    <color name="colorLibre2">#454141</color>
+    <color name="colorLibre3">#81524B6B</color>
+    <color name="colorLibre4">#524B6B</color>
+    <color name="colorMorosidad">#F03F3F</color>
+
+    //Transparentes
+    <color name="BlancoProgress2">#CDA2A2A2</color>
+
+    <color name="rellenoRcvResumen">#0D3F13E4</color>
+    <color name="rellenoRcvResumenRED">#2DE4133D</color>
+    <color name="rellenoRcvResumenPLOM">#0D747377</color>
+    <color name="rellenoRcvResumenGREEN">#0D7BA10A</color>
+
+    <color name="hint">#676562</color>
+
+    <color name="plomo">#7A7A7A</color>
+</resources>

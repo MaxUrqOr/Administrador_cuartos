@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F9F9F9"
+    android:orientation="vertical"
+    tools:context=".navegacion.listas.lista_makao_t2">
+
+    <SearchView
+        android:id="@+id/srcFiltrar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:queryHint="Buscar ..."
+        android:iconifiedByDefault="false"
+        android:fontFamily="@font/dmsans_18pt_bold"
+        android:background="@drawable/background_edt2"/>
+
+    <GridView
+        android:id="@+id/grdListaMakao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:scrollbars="none">
+
+    </GridView>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_makao"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_makao_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Departamentos"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustPan"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.Enviar_Mensajes"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GenerarAlquiler"
+            android:exported="false"
+            android:theme="@style/Theme.GenerarAlquiler" />
+        <activity
+            android:name=".activities.Pago_Licoreria"
+            android:exported="false"
+            android:theme="@style/Theme.PagoLicoreria" />
+        <activity
+            android:name=".activities.Detalle_Pagos"
+            android:exported="false"
+            android:theme="@style/Theme.HistorialPagos" />
+        <activity
+            android:name=".activities.Detalle_Departamento"
+            android:exported="false"
+            android:theme="@style/Theme.DetalleDepartamento" />
+        <activity
+            android:name=".activities.Vaucherfoto"
+            android:exported="false"
+            android:theme="@style/Theme.VoucherFoto" />
+        <activity
+            android:name=".activities.MontoIrregular"
+            android:exported="false"
+            android:theme="@style/Theme.VoucherFoto" />
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:theme="@style/Theme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.Completado"
+            android:exported="false" />
+        <activity
+            android:name=".login.OllvidasteContrasena"
+            android:exported="false"
+            android:theme="@style/Theme.OlvidasteContra" />
+        <activity
+            android:name=".login.Login"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LoginActivity" />
+        <activity
+            android:name=".Inicio"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Inicio"/>
+
+        <service
+            android:name=".mensages.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+    </application>
+
+</manifest>

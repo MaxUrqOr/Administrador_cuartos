@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.GenerarAlquiler">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        android:background="@color/morado_oscuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
+            android:src="@drawable/ic_regresar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:gravity="center"
+            android:text="Generar Alquiler"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        <AutoCompleteTextView
+            android:id="@+id/srcDepartamentosLibres"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_edt"
+            android:drawableStart="@drawable/ic_buscar2"
+            android:elevation="8dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:hint="Buscar Departamentos Libres"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingEnd="40dp"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="#79FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTituloNombreCompleto"
+                style="@style/titulosDetalleDepartamento"
+                android:layout_marginStart="16dp"
+                android:text="@string/nombres_completos_DetalleDepartamento"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloNombreCompleto"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloNombreCompleto">
+
+                <EditText
+                    android:id="@+id/edtNombreCompleto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="Juan Pérez"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="Rafael Javier Romero Flores" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloDNI"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="@string/dni_carnet_del_extranjero"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloDNI"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloDNI">
+
+                <EditText
+                    android:id="@+id/edtDNI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparente"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="000000"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="73116968" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTituloFechaIngreso"
+                style="@style/titulosDetalleDepartamento2"
+                android:text="@string/fecha_de_ingreso"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                app:layout_constraintTop_toTopOf="@+id/tvTtituloDNI" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloDNI">
+
+                <EditText
+                    android:id="@+id/edtFechaIngreso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparente"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="0000-00-00"
+                    android:imeOptions="actionDone"
+                    android:inputType="date|none"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="00/00/2000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloCelular"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="@string/celular"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/tvTituloMensualidad"
+                style="@style/titulosDetalleDepartamento2"
+                android:text="@string/mensualidad"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloFechaIngreso"
+                app:layout_constraintTop_toTopOf="@+id/tvTtituloCelular" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloDNI"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloCelular">
+
+                <EditText
+                    android:id="@+id/edtCelular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparente"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="0000000"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="922399690" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloMensualidad">
+
+                <EditText
+                    android:id="@+id/edtMensualidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparente"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="S/.000"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="S/.250" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloUsuario"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="Usuario"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="start|center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloUsuario"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloUsuario">
+
+                <EditText
+                    android:id="@+id/edtNombreUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="ejemploUsuario123"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="rafaelromero@makao.com" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloContrase"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="Contraseña"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+
+                android:gravity="start|center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloUsuario"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloContrase">
+
+                <EditText
+                    android:id="@+id/edtContrasena"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="*********"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="rafael123" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloGarantia"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="Garantía"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado2"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloGarantia"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloGarantia">
+
+                <EditText
+                    android:id="@+id/edtGarantia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparente"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:hint="S/.000"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#999794"
+                    android:textSize="16.5sp"
+                    tools:text="S/.200" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAgregarInquilino"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_btn_dialog"
+                android:backgroundTint="@color/morado_oscuro"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="AGREGAR INQUILINO"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:textAlignment="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:elevation="16dp"
+                android:src="@drawable/ic_counter_1"
+                app:layout_constraintBottom_toBottomOf="@+id/btnAgregarInquilino"
+                app:layout_constraintStart_toStartOf="@+id/btnAgregarInquilino"
+                app:layout_constraintTop_toTopOf="@+id/btnAgregarInquilino"
+                app:tint="@color/white" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGenerarAlquiler"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_btn_dialog"
+                android:backgroundTint="@color/naranja_paleta"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="GENERAR ALQUILER"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+                app:layout_constraintTop_toBottomOf="@+id/btnAgregarInquilino" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:elevation="16dp"
+                android:src="@drawable/ic_counter_2"
+                app:layout_constraintBottom_toBottomOf="@+id/btnGenerarAlquiler"
+                app:layout_constraintStart_toStartOf="@+id/btnGenerarAlquiler"
+                app:layout_constraintTop_toTopOf="@+id/btnGenerarAlquiler"
+                app:tint="@color/white" />
+
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnGenerarAlquiler" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

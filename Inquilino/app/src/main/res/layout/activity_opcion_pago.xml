@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".OpcionPago">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/llyEncabezado"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/morado_oscuro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="50dp"
+
+                    android:background="@drawable/background_detalle_departamento_top"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgAtras"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_regresar"
+                        app:tint="@color/white" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+
+                    android:background="@drawable/background_detalle_departamento_top"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout4">
+
+                    <TextView
+                        android:id="@+id/txtDepartamento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:fontFamily="@font/dmsans_18pt_bold"
+                        android:text="VALIDA EL PAGO"
+                        android:textColor="@color/white"
+                        android:textSize="32sp" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txtFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/dmsans_18pt_bold"
+                    android:text="Recuerda adjuntar la foto del pago/voucher"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="0dp"
+                    android:layout_height="400dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_contorno_foto"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtFecha">
+
+                    <ImageView
+                        android:id="@+id/imgFoto"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="10dp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubirFoto"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/background_btn_dialog"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:text="SUBIR FOTO"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnTomarFoto"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTomarFoto"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/background_btn_dialog"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:text="TOMAR FOTO"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnSubirFoto"
+                    app:layout_constraintEnd_toEndOf="@+id/constraintLayout4"
+                    app:layout_constraintStart_toEndOf="@+id/btnSubirFoto"
+                    app:layout_constraintTop_toTopOf="@+id/btnSubirFoto" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPagarLicoreria"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_btn_dialog"
+                    android:backgroundTint="#D6CDFE"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:text="PAGAR EN LICORERÍA"
+                    android:textAllCaps="true"
+                    android:textColor="@color/morado_oscuro"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/btnTomarFoto"
+                    app:layout_constraintStart_toStartOf="@+id/btnSubirFoto"
+                    app:layout_constraintTop_toBottomOf="@+id/btnSubirFoto" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_btn_dialog"
+                    android:backgroundTint="@color/naranja_paleta"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:text="ENVIAR"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/btnTomarFoto"
+                    app:layout_constraintStart_toStartOf="@+id/btnSubirFoto"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPagarLicoreria" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

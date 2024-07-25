@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/morado_oscuro"
+    tools:context=".PasosPagoLicoreria">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/dmsans_18pt_bold"
+        android:text="Pasos a seguir para el pago en Licorería"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper2"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="16dp"
+        android:autoStart="true"
+        android:flipInterval="4000"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        map:layout_constraintBottom_toTopOf="@+id/btnVerMapa"
+        map:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/img_licoreria" />
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/img_licoreria2" />
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/img_licoreria3" />
+
+
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-25dp"
+        android:layout_marginBottom="50dp"
+        android:autoStart="true"
+        android:elevation="2dp"
+        android:flipInterval="4000"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        map:layout_constraintTop_toBottomOf="@+id/viewFlipper2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/background_circle"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
+                    map:layout_constraintBottom_toBottomOf="parent"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/dmsans_18pt_light"
+                android:text="Dirígete a nuestra bodega, conocida como Licorería."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2lic"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/background_circle"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
+                    map:layout_constraintBottom_toBottomOf="parent"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/dmsans_18pt_light"
+                android:text="Solicita tu pago al cajero con confianza."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/constraintLayout2lic" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3lic"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:background="@drawable/background_circle"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="28dp"
+                    map:layout_constraintBottom_toBottomOf="parent"
+                    map:layout_constraintEnd_toEndOf="parent"
+                    map:layout_constraintStart_toStartOf="parent"
+                    map:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/dmsans_18pt_light"
+                android:text="Solicita tu pago al cajero con confianza."
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent"
+                map:layout_constraintTop_toBottomOf="@+id/constraintLayout3lic" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ViewFlipper>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVerMapa"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/background_btn_dialog"
+        android:backgroundTint="@color/naranja_paleta"
+        android:fontFamily="@font/dmsans_18pt_black"
+        android:text="Ver Mapa"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toStartOf="@+id/btnRegresar"
+        map:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegresar"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_btn_dialog"
+        android:backgroundTint="#CBC9C7"
+        android:fontFamily="@font/dmsans_18pt_black"
+        android:text="Cancelar"
+        android:textAllCaps="false"
+
+        android:textColor="@color/morado_oscuro"
+        android:textSize="18sp"
+        map:layout_constraintBottom_toBottomOf="@+id/btnVerMapa"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toEndOf="@+id/btnVerMapa"
+        map:layout_constraintTop_toTopOf="@+id/btnVerMapa" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnRegresar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Regresar"/>-->
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/map"-->
+    <!--        android:name="com.google.android.gms.maps.SupportMapFragment"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        tools:context=".Mapa"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

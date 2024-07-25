@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Departamentos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="iconoMakao">imgMakao</string>
+
+    <string name="titulo_bienvenido_login">Bienvenido</string>
+    <string name="saludo_login">
+        Saludos y bienvenido a nuestra\n plataforma.
+        <font fgcolor="#3F13E4">¡Adelante y comienza tu sesión!</font>
+    </string>
+    <string name="usuario_login">Usuario</string>
+    <string name="ejemplo_correo_login">ejemplo@makaopid.com</string>
+    <string name="contraseña_login">Contraseña</string>
+    <string name="ejemplo_contraseña_login">************</string>
+    <string name="olvidaste_contrasena"><u>Olvidaste tu contraseña?</u></string>
+    <string name="texto_advertencia">Ten presente que este aplicativo cuenta con un
+        <font fgcolor="#3F13E4">acceso restringido, </font>reservado exclusivamente para inquilinos autorizados.
+    </string>
+    <string name="ingresar_login">Ingresar</string>
+    <string name="titulo_recuperar_contrase">¿Olvidaste la contraseña?</string>
+    <string name="descripcionRecuperarContraseña">Para restablecer tu contraseña, es necesario contar con tu dirección
+        de <font fgcolor="#3F13E4">correo electrónico</font> o número de <font fgcolor="#3F13E4">teléfono </font> que pueda ser
+        verificado de manera segura.</string>
+    <string name="btn1RC">Solicitar Contraseña</string>
+    <string name="btn2RC">Regresar</string>
+    <string name="saludo_main">Hola, </string>
+    <string name="habitacion_sin_carga">MAK-000</string>
+    <string name="user_carga">\ User</string>
+    <string name="fecha_sin_carga">\ 00 de enero del 0000</string>
+    <string name="dni_sin_carga">000000000</string>
+    <string name="notificaciones_sin_carga">0</string>
+    <string name="img_descripcion_notificacion">Notificaciones</string>
+    <string name="img_descripcion_fondo">Fondo</string>
+    <string name="descripcion_img_user">Usuario</string>
+    <string name="texto_previo_fecha_de_registro">Ingresaste el</string>
+    <string name="deudas">Deudas</string>
+    <string name="resumen">Resumen</string>
+    <string name="solicitudes">Solicitudes</string>
+    <string name="titulo_deudas">Próximos Pagos</string>
+    <string name="titulo_mensualidad_rcv">Mensualidad\ </string>
+    <string name="Mes_sin_carga">Mes 0000</string>
+    <string name="fecha_deudas__sin_carga">Se vence el 00/00/00</string>
+    <string name="dinero_sin_carga">S/. 000.00</string>
+    <string name="nuevos_soles">\ Soles</string>
+    <string name="pagar">Pagar</string>
+    <string name="Dias_restantes">Quedan x días</string>
+    <string name="pagoInvalidoAppButton">Pago Inválido</string>
+    <string name="tituloDepartamentos">Departamentos Libres</string>
+    <string name="tituloSolicitudes">Solicitudes</string>
+    <string name="tituloPagosC">Pagos a Confirmar\nen Lista</string>
+    <string name="subtitulo1">Resumen</string>
+    <string name="subtitulo2">Últimos Pagos</string>
+    <string name="tituloBtnMainMakao">Makao</string>
+    <string name="tituloBtnMainPID">P.Identidad</string>
+    <string name="pagoVerificadoAppButton">Pago Verificado</string>
+    <string name="departamentos">Departamentos</string>
+    <string name="regresar">regresar</string>
+    <string name="nombres_completos_DetalleDepartamento">Nombres Completos</string>
+    <string name="liberar_departamento">Liberar Departamento</string>
+    <string name="dni_carnet_del_extranjero">DNI / CE</string>
+    <string name="fecha_de_ingreso">Fecha de Ingreso</string>
+    <string name="celular">Celular</string>
+    <string name="mensualidad">Mensualidad</string>
+    <string name="pagos_pendientes">Pagos Pendientes</string>
+    <string name="ver_historia_de_pagos">VER HISTORIAL DE PAGOS</string>
+    <string name="editar">EDITAR</string>
+    <string name="reportar_ninquilino">REPORTAR\nINQUILINO</string>
+    <string name="editarBtn">EDITAR</string>
+    <string name="guardarBtn">GUARDAR</string>
+    <string name="ltimos_pagos">Últimos Pagos</string>
+    <string name="garantia">Garantia</string>
+
+
+    <string name="default_notification_channel_id">CHANEL ID</string>
+    <string name="msg_token_fmt"></string>
+
+</resources>

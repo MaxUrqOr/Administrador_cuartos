@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.Detalle_Departamento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llyEncabezado"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        tools:background="@color/colorDeuda">
+
+        <ImageView
+            android:id="@+id/imgRegresar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/regresar"
+            android:src="@drawable/ic_regresar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+
+            android:background="@drawable/background_detalle_departamento_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtDepartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                tools:text="MAK 101" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTituloNombreCompleto"
+                style="@style/titulosDetalleDepartamento"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/nombres_completos_DetalleDepartamento"
+
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtLiberarDepartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/dmsans_18pt_light"
+                android:text="@string/liberar_departamento"
+                android:textColor="#E91E63"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTituloNombreCompleto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTituloNombreCompleto" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_detalle_departamento_rellenado"
+                android:elevation="4dp"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/txtLiberarDepartamento"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloNombreCompleto"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloNombreCompleto">
+
+                <EditText
+                    android:id="@+id/edtNombreCompleto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColorHint="#999794"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="Rafael Javier Romero Flores" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloDNI"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="@string/dni_carnet_del_extranjero"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloNombreCompleto"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout4"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloDNI"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloDNI">
+
+                <EditText
+                    android:id="@+id/edtDNI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textAlignment="center"
+                    android:textColorHint="#999794"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="73116968" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTituloFechaIngreso"
+                style="@style/titulosDetalleDepartamento2"
+                android:text="@string/fecha_de_ingreso"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                app:layout_constraintTop_toTopOf="@+id/tvTtituloDNI" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_detalle_departamento_rellenado"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloDNI">
+
+                <EditText
+                    android:id="@+id/edtFecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textAlignment="center"
+                    android:background="@color/white"
+                    android:textColorHint="#999794"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16.5sp"
+                    tools:text="01/01/2024" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTtituloCelular"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="16dp"
+                android:text="@string/celular"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/tvTituloMensualidad"
+                style="@style/titulosDetalleDepartamento2"
+                android:text="@string/mensualidad"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloFechaIngreso"
+                app:layout_constraintTop_toTopOf="@+id/tvTtituloCelular" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_detalle_departamento_rellenado"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout6"
+                app:layout_constraintStart_toStartOf="@+id/tvTtituloDNI"
+                app:layout_constraintTop_toBottomOf="@+id/tvTtituloCelular">
+
+                <EditText
+                    android:id="@+id/edtTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textAlignment="center"
+
+                    android:textColorHint="#999794"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="922399690" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_detalle_departamento_rellenado"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloMensualidad">
+
+                <EditText
+                    android:id="@+id/edtCosto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textAlignment="center"
+                    android:textColorHint="#999794"
+                    android:background="@color/white"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="S/.250" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTituloGarantia"
+                style="@style/titulosDetalleDepartamento2"
+                android:layout_marginTop="12dp"
+                android:text="@string/garantia"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_detalle_departamento_rellenado"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloGarantia"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloGarantia">
+
+
+                <EditText
+                    android:id="@+id/edtGarantia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/white"
+                    android:textColorHint="#999794"
+                    android:fontFamily="@font/dmsans_18pt_regular"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="S/.250" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/titulosDetalleDepartamento"
+                android:text="@string/pagos_pendientes"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/tvTituloNombreCompleto"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclPendientes"
+                android:layout_width="0dp"
+                android:layout_height="93dp"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnySuperior2"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/background_resumen_rcv_red"
+                android:elevation="4dp"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <TextView
+                    android:id="@+id/txtMensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#524B6B"
+                    android:fontFamily="@font/dmsans_18pt_bold"
+                    android:gravity="center"
+                    android:text="El Inquilino debe"
+                    android:textSize="16.5sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/titulosDetalleDepartamento"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                android:text="@string/ltimos_pagos"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/rclPendientes" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rclPagos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/rclPendientes"
+                app:layout_constraintStart_toStartOf="@+id/rclPendientes"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVerHistorial"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_en_deuda"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="@string/ver_historia_de_pagos"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toStartOf="@id/btnReportar"
+                app:layout_constraintStart_toStartOf="@+id/rclPagos"
+                app:layout_constraintTop_toBottomOf="@+id/rclPagos" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnReportar"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_morosidad_inminente"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="@string/reportar_ninquilino"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/rclPagos"
+                app:layout_constraintStart_toEndOf="@+id/btnVerHistorial"
+                app:layout_constraintTop_toBottomOf="@+id/rclPagos" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEditar"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_btn_otros"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="@string/editarBtn"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnGuardar"
+                app:layout_constraintStart_toStartOf="@+id/rclPagos"
+                app:layout_constraintTop_toBottomOf="@+id/btnVerHistorial" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnGuardar"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:background="@drawable/background_btn_otros"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="@string/guardarBtn"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="@+id/rclPagos"
+                app:layout_constraintStart_toEndOf="@+id/btnEditar"
+                app:layout_constraintTop_toTopOf="@+id/btnEditar" />
+
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEditar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

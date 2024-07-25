@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llyFondo"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@drawable/background_resumen_rcv"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_money_resumen"
+        android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#3F13E4" />
+
+        <TextView
+            android:id="@+id/txtFechaPago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:textColor="@color/morado_oscuro"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="@+id/imageView3"
+            tools:text="Mensualidad Diciembre 2023" />
+
+        <TextView
+            android:id="@+id/txtFechaDeuda"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsans_18pt_regular"
+            android:textColor="@color/hint"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/txtFechaPago"
+            app:layout_constraintTop_toBottomOf="@+id/txtFechaPago"
+            tools:text="01 Dic 2023 a las 11:30 am" />
+
+        <TextView
+            android:id="@+id/txtCosto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:textColor="#3F13E4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="S/.250" />
+
+        <TextView
+            android:id="@+id/txtEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:textColor="#3F13E4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="S/.250" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+
+
+</LinearLayout>

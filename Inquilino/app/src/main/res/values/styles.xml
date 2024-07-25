@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="SlideUpAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+    </style>
+
+    <style name="titulosDetalleDepartamento">
+        <item name="fontFamily">@font/dmsans_18pt_bold</item>
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="titulosDetalleDepartamento2">
+        <item name="fontFamily">@font/dmsans_18pt_bold</item>
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlancoProgress2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:background="@drawable/background_dialogs2"
+        android:elevation="8dp"
+        android:layout_margin="12dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_line_dialog"
+            app:tint="@color/morado_oscuro" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="¿Desea reportar al inquilino y agregar su historial de morosidad?"
+            android:textAlignment="center"
+            android:textColor="@color/morado_oscuro"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/dmsans_18pt_light"
+            android:text="Recuerda los datos del inquilino se almacenarán en la web en la zona de Reportados/Morosidad"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAceptar"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/background_btn_dialog"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="ACEPTAR"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancelar"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_btn_dialog"
+            android:backgroundTint="#D6CDFE"
+            android:fontFamily="@font/dmsans_18pt_bold"
+            android:text="CANCELAR"
+            android:textColor="@color/morado_oscuro"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

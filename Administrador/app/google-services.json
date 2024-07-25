@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "844274398885",
+    "project_id": "makao-9eac3",
+    "storage_bucket": "makao-9eac3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844274398885:android:a29df6dd15ce7aef92ff4c",
+        "android_client_info": {
+          "package_name": "com.makao.administrador"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtAAoE8B6g0pmHGQGMIbKv9fS74l2oBs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844274398885:android:225706f0184049df92ff4c",
+        "android_client_info": {
+          "package_name": "com.makao.inquilino"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtAAoE8B6g0pmHGQGMIbKv9fS74l2oBs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

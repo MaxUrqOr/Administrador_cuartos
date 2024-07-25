@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <!-- background_dotted.xml -->
+        <shape android:shape="rectangle">
+            <stroke android:width="2.5dp" android:color="#9D97B5" android:dashWidth="6dp" android:dashGap="6dp" />
+            <solid android:color="@color/rellenoRcvResumen" />
+            <corners android:radius="16dp" />
+        </shape>
+
+    </item>
+</selector>

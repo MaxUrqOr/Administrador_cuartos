@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Departamentos" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.LoginActivity" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">#3F13E4</item>
+
+    </style>
+
+    <style name="Theme.OlvidasteContra" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">#3F13E4</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <style name="Theme.Splash" parent="Theme.Material3.DayNight.NoActionBar">
+        //codigo para hacer transparente el StatusBar
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="Estilos_subtitulosDimensiones">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:fontFamily">@font/dmsans_18pt_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Inicio" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:navigationBarColor">@color/morado_oscuro</item>
+    </style>
+
+    <style name="Theme.DetalleDepartamento" parent="Theme.Material3.DayNight.NoActionBar">
+        //codigo para hacer transparente el StatusBar
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+
+    </style>
+
+    <style name="Theme.VoucherFoto" parent="Theme.Material3.DayNight.NoActionBar">
+        //codigo para hacer transparente el StatusBar
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">#232D3A</item>
+
+    </style>
+
+    <style name="Theme.HistorialPagos" parent="Theme.Material3.DayNight.NoActionBar">
+        //codigo para hacer transparente el StatusBar
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.PagoLicoreria" parent="Theme.Material3.DayNight.NoActionBar">
+        //codigo para hacer transparente el StatusBar
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <style name="Theme.GenerarAlquiler" parent="Theme.Material3.DayNight.NoActionBar">
+        //codigo para hacer transparente el StatusBar
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+
+    <style name="Theme.Departamentos" parent="Base.Theme.Departamentos" />
+</resources>

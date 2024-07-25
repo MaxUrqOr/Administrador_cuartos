@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".navegacion.Solicitudes">
+
+
+    <TextView
+        android:id="@+id/tvTituloRcv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/dmsans_18pt_bold"
+        android:text="Solicitudes"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/crdPagoLicoreria"
+        android:layout_width="175dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="24dp"
+
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/crdGenerarAlquiler"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloRcv">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/background_linear_cv_solicitud4es"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintCambiarColor"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_oval_solicitudes">
+
+                <ImageView
+                    android:id="@+id/imgPagoLicoreria"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_money_resumen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/naranja_paleta" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtPagoLicoreria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_18pt_black"
+                android:text="PAGO EN LICORERÍA"
+                android:textAlignment="center"
+                android:textColor="@color/naranja_paleta"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/crdGenerarAlquiler"
+        android:layout_width="175dp"
+        android:layout_height="220dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/crdPagoLicoreria"
+        app:layout_constraintTop_toTopOf="@+id/crdPagoLicoreria">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/background_linear_cv_solicitud4es"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintCambiarColor2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_oval_solicitudes">
+
+                <ImageView
+                    android:id="@+id/imgDepartamentoPlantilla2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_generar_alguiler"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/naranja_paleta" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtDepartamento"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_18pt_black"
+                android:text="GENERAR \nALQUILER"
+                android:textAlignment="center"
+                android:textColor="@color/naranja_paleta"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

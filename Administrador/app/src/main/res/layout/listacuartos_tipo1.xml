@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F9F9F9"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_linear_cv"
+        android:elevation="8dp"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="147dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_oval_item_plantilla_rcv_pagos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgDepartamento"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_bed_rcv_deudas"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/imgVerFoto"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+
+                android:src="@drawable/ic_ver_fotos"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnPagoVerificado"
+
+
+                app:tint="@color/morado_oscuro" />
+
+
+            <TextView
+                android:id="@+id/txtDetapartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:textColor="@color/morado_oscuro"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                tools:text="MAK Departamento 103" />
+
+            <TextView
+                android:id="@+id/txtFechaMensualidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/dmsans_18pt_black"
+                android:textColor="@color/morado_oscuro"
+                android:textSize="14.5sp"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/txtFechaPago"
+                app:layout_constraintTop_toBottomOf="@+id/txtFechaPago"
+                tools:text="ENE 2023" />
+
+            <TextView
+                android:id="@+id/txtFechaPago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/dmsans_18pt_regular"
+                android:textColor="@color/hintPalalabras"
+                android:textSize="15.5sp"
+                app:layout_constraintStart_toStartOf="@+id/txtDetapartamento"
+                app:layout_constraintTop_toBottomOf="@+id/txtDetapartamento"
+                tools:text="Pago del 01/12/23 al 01/01/24" />
+
+            <TextView
+                android:id="@+id/txtMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/dmsans_18pt_black"
+                android:textColor="@color/letras2"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFechaPago"
+                tools:text="S/250.00 soles" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPagoInvalido"
+                android:layout_width="128dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_btn_pagoinvalido"
+                android:fontFamily="@font/dmsans_18pt_medium"
+                android:text="@string/pagoInvalidoAppButton"
+                android:textAllCaps="false"
+                android:textColor="@color/btnPagoInvalid"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/txtMonto" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPagoVerificado"
+                android:layout_width="128dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/background_btn_verificado"
+                android:fontFamily="@font/dmsans_18pt_medium"
+                android:text="@string/pagoVerificadoAppButton"
+                android:textAllCaps="false"
+                android:textColor="@color/btnPagoVerificado"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/btnPagoInvalido"
+                app:layout_constraintTop_toTopOf="@+id/btnPagoInvalido" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</LinearLayout>

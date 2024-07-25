@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activities.Vaucherfoto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llyEncabezado"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:background="#232D3A">
+
+        <ImageView
+            android:id="@+id/imgRegresar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/regresar"
+            android:src="@drawable/ic_regresar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+
+            android:background="@drawable/background_detalle_departamento_top"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtDepartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="MAK 101"
+                android:textColor="@color/white"
+                android:textSize="48sp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9F9F9">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="0dp"
+                android:layout_height="450dp"
+
+                android:layout_margin="16dp"
+                android:background="@drawable/background_contorno_foto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgFoto"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtDescripción"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dmsans_18pt_medium"
+                android:text="Valide el monto de la foto con el pago mensual correspondiente."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout6"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="Monto en Foto"
+                android:textColor="@color/morado_oscuro"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txtDescripción"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescripción" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_double_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="@+id/textView15"
+                app:tint="@color/morado_oscuro" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_monto_irregular"
+                android:elevation="4dp"
+                android:gravity="center|start"
+
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintEnd_toEndOf="@+id/txtDescripción"
+
+                app:layout_constraintTop_toTopOf="@+id/textView15">
+
+                <EditText
+                    android:id="@+id/edtMontoFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/transparente"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/morado_oscuro"
+                    android:textSize="16.5sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="Mensualidad"
+                android:textColor="@color/naranja_paleta"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/txtDescripción"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_double_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/textView18"
+                app:tint="@color/naranja_paleta" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_monto_irregular2"
+                android:elevation="4dp"
+                android:gravity="center|start"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                app:layout_constraintEnd_toEndOf="@+id/txtDescripción"
+                app:layout_constraintTop_toTopOf="@+id/textView18">
+
+                <EditText
+                    android:id="@+id/edtMontoMensualidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/transparente"
+                    android:enabled="false"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="S/.250"
+                    android:textAlignment="center"
+                    android:textColor="@color/naranja_paleta"
+                    android:textSize="16.5sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/dmsans_18pt_bold"
+                android:text="Falta en pago"
+                android:textColor="#232D3A"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_double_arrow"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                app:layout_constraintStart_toStartOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/textView20"
+                app:tint="#232D3A" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_monto_irregular3"
+                android:elevation="4dp"
+                android:gravity="center|start"
+
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="@+id/txtDescripción"
+                app:layout_constraintTop_toTopOf="@+id/textView20">
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:background="@color/transparente"
+                    android:enabled="false"
+                    android:fontFamily="@font/dmsans_18pt_medium"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="S/.250"
+                    android:textAlignment="center"
+                    android:textColor="#232D3A"
+                    android:textSize="16.5sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnActualizarMonto"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/background_btn_dialog"
+                android:backgroundTint="@color/letras2"
+                android:fontFamily="@font/dmsans_18pt_medium"
+                android:text="ACTUALIZAR MONTO A PAGAR"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="18dp"
+                app:layout_constraintEnd_toEndOf="@+id/btnActualizarMonto"
+                app:layout_constraintTop_toBottomOf="@+id/btnActualizarMonto" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

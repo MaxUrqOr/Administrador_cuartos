@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/crdContenedor"
+        android:layout_width="175dp"
+        android:layout_height="220dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_al_dia"
+        app:cardBackgroundColor="@color/colorPagado"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintCambiarColor"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/background_oval_departamentos_general">
+
+                <ImageView
+                    android:id="@+id/imgPagoLicoreria"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/ic_departamentos"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtDepartamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/dmsans_18pt_black"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                tools:text="MAK 101" />
+
+            <TextView
+                android:id="@+id/txtEstadoDepartamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/dmsans_18pt_light"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                tools:text="En Deuda" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
